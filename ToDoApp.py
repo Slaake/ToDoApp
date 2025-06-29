@@ -40,7 +40,3 @@ def ToDoLists(MenuChoice):
         
         print("Would you like to make another list?")
 
-
-if __name__ == '__main__':
-    MainMenu()
-    ToDoLists(MenuChoice)

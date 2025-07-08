@@ -1,16 +1,20 @@
 # Tkinter configuration files
 
+from customtkinter import *
 from tkinter import *
 from ToDoApp import *
 
-window = Tk()
-window.geometry('450x450')
-window.title('ToDo App')
-icon = PhotoImage(file='logo.png')
-window.iconphoto(True,icon)
-window.config(background='grey')
+# Init Variables
+HomeWindow = Tk()
 
-label = Label(window,
+HomeWindow.geometry('450x450')
+HomeWindow.title('ToDo App')
+icon = PhotoImage(file='logo.png')
+HomeWindow.iconphoto(True,icon)
+HomeWindow.config(background='grey')
+
+# App Window
+label = Label(HomeWindow,
                 text='To-Do App',
                 font=('hack mono',35,'bold'),
                 fg='black',
@@ -23,8 +27,19 @@ label = Label(window,
                 compound='left',
             )
 
-button = Button(window,
+# Action Buttons
+NewListButton = Button(HomeWindow,
                 text="Create a new list",
+                font=('hack mono',20),
+                fg='black',
+                bg='grey',
+                activeforeground='black',
+                activebackground='grey',
+                command=CreateToDoList,
+                )
+
+UpdateListButton = Button(HomeWindow,
+                text="Update a list",
                 font=('hack mono',20),
                 fg='black',
                 bg='grey',
@@ -33,8 +48,36 @@ button = Button(window,
                 command=MainMenu,
                 )
 
-label.pack()
-button.pack()
+DeleteListButton = Button(HomeWindow,
+                text="Delete a list",
+                font=('hack mono',20),
+                fg='black',
+                bg='grey',
+                activeforeground='black',
+                activebackground='grey',
+                command=MainMenu,
+                )
+ViewListButton = Button(HomeWindow,
+                text="View a list",
+                font=('hack mono',20),
+                fg='black',
+                bg='grey',
+                activeforeground='black',
+                activebackground='grey',
+                command=MainMenu,
+                )
 
-window.mainloop()
+# User Input Box
+UserInput = Entry(HomeWindow,
+            font=('hack mono',20))
+
+label.pack()
+UserInput.pack()
+NewListButton.pack()
+UpdateListButton.pack()
+DeleteListButton.pack()
+ViewListButton.pack()
+UserInput.pack()
+
+HomeWindow.mainloop()
 

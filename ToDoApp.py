@@ -28,15 +28,13 @@ def MainMenu():
         else:
             return MenuChoice
 
-def ToDoLists(MenuChoice):
-    if MenuChoice == '1':
-        print("\tCreating a new List")
+def CreateToDoList():
+    print("\tCreating a new List")
+    ListName = input("Enter name for the list: ")
+    while ListName == "":
+        print("Please name your list")
         ListName = input("Enter name for the list: ")
-        while ListName == "":
-            print("Please name your list")
-            ListName = input("Enter name for the list: ")
-        else:
-            print(ListName, "has been created.")
-        
-        print("Would you like to make another list?")
+    else:
+        print(ListName, "has been created.")    
+    print("Would you like to make another list?")
 

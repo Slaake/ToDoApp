@@ -1,13 +1,12 @@
 # Tkinter configuration files
 
-from customtkinter import *
 from tkinter import *
 from ToDoApp import *
 
 # Init Variables
 HomeWindow = Tk()
 
-HomeWindow.geometry('450x450')
+HomeWindow.geometry('575x675')
 HomeWindow.title('ToDo App')
 icon = PhotoImage(file='logo.png')
 HomeWindow.iconphoto(True,icon)

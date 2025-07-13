@@ -37,10 +37,11 @@ def NewToDoListFile():
 def CreateToDoList(File):
     global List
     ListName = input("\tWhat would you like to name your new list?\n")
-    List = List.append(ListName)
+    if ListName not in List:
+        List.append(ListName)
     with open(File, 'a') as csvfile:
         writer = csv.writer(csvfile)
-        writer.writerows(List)
+        writer.writerows([List])
 
 def AddItemToList():
     print("\tAvailable Lists to add items to")

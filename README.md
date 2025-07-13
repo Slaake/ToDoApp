@@ -1,4 +1,4 @@
-<h1>Summary</h1>
+# Summary
 
 <p> A simple ToDo list written in Python </p>
 
@@ -6,13 +6,13 @@
 
 <img src="logo.png" alt="To Do App Logo" width="200" height="200" class="center">
 
-<h2>Work In Progress Features</h2>
+## Work In Progress Features
 <ul>
     <li>Create a new ToDo List</li>
     <li>Add item to list</li>
 </ul>
 
-<h2>Planned Features</h2>
+## Planned Features
 <ul>
     <li>Update item on list</li>
     <li>Remove item from list</li>
@@ -20,7 +20,7 @@
     <li>View lists</li>
 </ul>
 
-<h2>Completed Features</h2>
+## Completed Features
 <ul>
     <li>None yet :)</li>
 </ul>
